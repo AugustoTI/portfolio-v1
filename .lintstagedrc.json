@@ -1,0 +1,3 @@
+{
+  "*.ts(x)?": ["pnpm lint --ignore-pattern '!/.jest/'", "pnpm test -- --findRelatedTests"]
+}
