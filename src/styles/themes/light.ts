@@ -1,3 +1,17 @@
+import { Lora, Roboto } from '@next/font/google'
+
+const roboto = Roboto({
+  weight: ['400', '500'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const lora = Lora({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 export const light = {
   font: {
     sizes: {
@@ -9,6 +23,10 @@ export const light = {
       small: 'var(--small-font-size)',
       smaller: 'var(--smaller-font-size)',
       tiny: 'var(--tiny-font-size)',
+    },
+    family: {
+      roboto: roboto.style.fontFamily,
+      lora: lora.style.fontFamily,
     },
   },
   colors: {

@@ -1,11 +1,6 @@
 import { css, Theme } from '@emotion/react'
 
-import { Lora, Roboto } from '@next/font/google'
-
-const roboto = Roboto({ weight: ['400', '500'], subsets: ['latin'], display: 'swap' })
-const lora = Lora({ weight: ['400', '500', '600'], subsets: ['latin'], display: 'swap' })
-
-export const globalStyles = ({ colors, medias }: Theme) => css`
+export const globalStyles = ({ colors, medias, font }: Theme) => css`
   * {
     margin: 0;
     padding: 0;
@@ -43,7 +38,7 @@ export const globalStyles = ({ colors, medias }: Theme) => css`
   }
 
   body {
-    font-family: ${roboto.style.fontFamily};
+    font-family: ${font.family.roboto};
     font-size: var(--normal-font-size);
     background: ${colors.body};
     color: ${colors.text};
@@ -53,7 +48,7 @@ export const globalStyles = ({ colors, medias }: Theme) => css`
   h1,
   h2,
   h3 {
-    font-family: ${lora.style.fontStyle};
+    font-family: ${font.family.lora};
     color: ${colors.title};
     font-weight: 500;
   }
@@ -69,6 +64,12 @@ export const globalStyles = ({ colors, medias }: Theme) => css`
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  button {
+    cursor: pointer;
+    outline: none;
+    border: none;
   }
 
   /*=============== REUSABLE CSS CLASSES ===============*/
