@@ -109,8 +109,6 @@ export const NavList = styled.ul`
   `}
 `
 
-export const NavItem = styled.li``
-
 export const NavLink = styled.a`
   ${({ theme: { font, colors, medias } }) => css`
     display: flex;
@@ -153,8 +151,6 @@ export const NavMenuCloseBtn = styled.button`
     }
   `}
 `
-
-export const NavButtons = styled.div``
 
 export const NavOpenMenuBtn = styled.button`
   ${({ theme: { colors, medias } }) => css`

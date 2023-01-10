@@ -22,41 +22,41 @@ export const Header = () => {
 
         <S.NavMenu isOpen={isOpen}>
           <S.NavList className="grid">
-            <S.NavItem>
+            <li>
               <S.NavLink href="#home" onClick={() => handleToggleMenu()}>
                 <RiHome5Line /> Home
               </S.NavLink>
-            </S.NavItem>
+            </li>
 
-            <S.NavItem>
+            <li>
               <S.NavLink href="#habilidades" onClick={() => handleToggleMenu()}>
                 <RiTrophyLine /> Habilidades
               </S.NavLink>
-            </S.NavItem>
+            </li>
 
-            <S.NavItem>
+            <li>
               <S.NavLink href="#qualificacoes" onClick={() => handleToggleMenu()}>
                 <RiBookOpenLine /> Qualificações
               </S.NavLink>
-            </S.NavItem>
+            </li>
 
-            <S.NavItem>
+            <li>
               <S.NavLink href="#serviços" onClick={() => handleToggleMenu()}>
                 <RiBriefcaseLine /> Serviços
               </S.NavLink>
-            </S.NavItem>
+            </li>
 
-            <S.NavItem>
+            <li>
               <S.NavLink href="#projetos" onClick={() => handleToggleMenu()}>
                 <RiImageLine /> Projetos
               </S.NavLink>
-            </S.NavItem>
+            </li>
 
-            <S.NavItem>
+            <li>
               <S.NavLink href="#contato" onClick={() => handleToggleMenu()}>
                 <RiChat3Line /> Contato
               </S.NavLink>
-            </S.NavItem>
+            </li>
           </S.NavList>
 
           <S.NavMenuCloseBtn
@@ -68,7 +68,7 @@ export const Header = () => {
           </S.NavMenuCloseBtn>
         </S.NavMenu>
 
-        <S.NavButtons>
+        <div>
           <S.NavOpenMenuBtn
             onClick={() => handleToggleMenu()}
             title="Abrir menu"
@@ -76,7 +76,7 @@ export const Header = () => {
           >
             <RiMenu4Line />
           </S.NavOpenMenuBtn>
-        </S.NavButtons>
+        </div>
       </S.NavBar>
     </S.Container>
   )
