@@ -9,10 +9,11 @@ import {
   RiMenu4Line,
   RiTrophyLine,
 } from 'react-icons/ri'
-import { useState } from 'react'
+import { useHeaderMenu } from '~/stores/headerMenu'
 
 export const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const isOpen = useHeaderMenu(store => store.isOpen)
+  const handleToggleMenu = useHeaderMenu(store => store.handleToggleMenu)
 
   return (
     <S.Container>
@@ -22,64 +23,49 @@ export const Header = () => {
         <S.NavMenu isOpen={isOpen}>
           <S.NavList className="grid">
             <S.NavItem>
-              <S.NavLink href="#home" onClick={() => setIsOpen(prevState => !prevState)}>
+              <S.NavLink href="#home" onClick={() => handleToggleMenu()}>
                 <RiHome5Line /> Home
               </S.NavLink>
             </S.NavItem>
 
             <S.NavItem>
-              <S.NavLink
-                href="#habilidades"
-                onClick={() => setIsOpen(prevState => !prevState)}
-              >
+              <S.NavLink href="#habilidades" onClick={() => handleToggleMenu()}>
                 <RiTrophyLine /> Habilidades
               </S.NavLink>
             </S.NavItem>
 
             <S.NavItem>
-              <S.NavLink
-                href="#qualificacoes"
-                onClick={() => setIsOpen(prevState => !prevState)}
-              >
+              <S.NavLink href="#qualificacoes" onClick={() => handleToggleMenu()}>
                 <RiBookOpenLine /> Qualificações
               </S.NavLink>
             </S.NavItem>
 
             <S.NavItem>
-              <S.NavLink
-                href="#serviços"
-                onClick={() => setIsOpen(prevState => !prevState)}
-              >
+              <S.NavLink href="#serviços" onClick={() => handleToggleMenu()}>
                 <RiBriefcaseLine /> Serviços
               </S.NavLink>
             </S.NavItem>
 
             <S.NavItem>
-              <S.NavLink
-                href="#projetos"
-                onClick={() => setIsOpen(prevState => !prevState)}
-              >
+              <S.NavLink href="#projetos" onClick={() => handleToggleMenu()}>
                 <RiImageLine /> Projetos
               </S.NavLink>
             </S.NavItem>
 
             <S.NavItem>
-              <S.NavLink
-                href="#contato"
-                onClick={() => setIsOpen(prevState => !prevState)}
-              >
+              <S.NavLink href="#contato" onClick={() => handleToggleMenu()}>
                 <RiChat3Line /> Contato
               </S.NavLink>
             </S.NavItem>
           </S.NavList>
 
-          <S.NavMenuCloseBtn onClick={() => setIsOpen(prevState => !prevState)}>
+          <S.NavMenuCloseBtn onClick={() => handleToggleMenu()}>
             <RiCloseLine />
           </S.NavMenuCloseBtn>
         </S.NavMenu>
 
         <S.NavButtons>
-          <S.NavOpenMenuBtn onClick={() => setIsOpen(prevState => !prevState)}>
+          <S.NavOpenMenuBtn onClick={() => handleToggleMenu()}>
             <RiMenu4Line />
           </S.NavOpenMenuBtn>
         </S.NavButtons>
