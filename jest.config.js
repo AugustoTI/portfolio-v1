@@ -7,6 +7,7 @@ const createJestConfig = nextJest({
 /** @type {import('jest').Config} */
 const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
+  snapshotSerializers: ['@emotion/jest/serializer'],
   collectCoverageFrom: [
     'src/**/*.ts(x)?',
     '!src/*.ts(x)?',
