@@ -17,7 +17,7 @@ export const Header = () => {
 
   return (
     <S.Container>
-      <S.NavBar className="container">
+      <S.NavBar className="container" aria-label="Principal">
         <S.NavLogo href={'/'}>Augusto</S.NavLogo>
 
         <S.NavMenu isOpen={isOpen}>
@@ -59,13 +59,21 @@ export const Header = () => {
             </S.NavItem>
           </S.NavList>
 
-          <S.NavMenuCloseBtn onClick={() => handleToggleMenu()}>
+          <S.NavMenuCloseBtn
+            onClick={() => handleToggleMenu()}
+            title="Fechar menu"
+            aria-label="Fechar menu"
+          >
             <RiCloseLine />
           </S.NavMenuCloseBtn>
         </S.NavMenu>
 
         <S.NavButtons>
-          <S.NavOpenMenuBtn onClick={() => handleToggleMenu()}>
+          <S.NavOpenMenuBtn
+            onClick={() => handleToggleMenu()}
+            title="Abrir menu"
+            aria-label="Abrir menu"
+          >
             <RiMenu4Line />
           </S.NavOpenMenuBtn>
         </S.NavButtons>
