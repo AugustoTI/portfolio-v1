@@ -8,10 +8,13 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
   collectCoverageFrom: [
-    'src/**/*.(test|spec).ts(x)?',
+    'src/**/*.ts(x)?',
     '!src/*.ts(x)?',
-    '!src/**/*.stories.tsx',
+    '!src/**/*.stories.ts(x)',
     '!src/pages/**/*.tsx',
+    '!src/styles/**/*.ts(x)?',
+    '!src/templates/**/*.ts(x)',
+    '!src/**/*.d.ts',
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
 }
