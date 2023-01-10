@@ -18,6 +18,14 @@ const customJestConfig = {
     '!src/**/*.d.ts',
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
+  modulePaths: ['<rootDir>/', '<rootDir>/.jest'],
+  moduleNameMapper: {
+    '~/components/(.*)': '<rootDir>/src/components/$1',
+    '~/templates/(.*)': '<rootDir>/src/templates/$1',
+    '~/stores/(.*)': '<rootDir>/src/stores/$1',
+    '~/utils/(.*)': '<rootDir>/src/utils/$1',
+    '~/styles/(.*)': '<rootDir>/src/styles/$1',
+  },
 }
 
 module.exports = createJestConfig(customJestConfig)

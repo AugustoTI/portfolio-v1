@@ -1,6 +1,5 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import Link from 'next/link'
 
 export const Container = styled.header`
   ${({ theme: { zIndex, medias, colors } }) => css`
@@ -48,14 +47,6 @@ export const NavBar = styled.nav`
     @media screen and (min-width: 1048px) {
       margin-inline: auto;
     }
-  `}
-`
-
-export const NavLogo = styled(Link)`
-  ${({ theme: { colors, font } }) => css`
-    color: ${colors.title};
-    font-family: ${font.family.lora};
-    font-weight: 500;
   `}
 `
 

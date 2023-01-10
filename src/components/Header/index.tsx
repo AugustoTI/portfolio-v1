@@ -10,6 +10,7 @@ import {
   RiTrophyLine,
 } from 'react-icons/ri'
 import { useHeaderMenu } from '~/stores/headerMenu'
+import { NavLogo } from './NavLogo'
 
 export const Header = () => {
   const isOpen = useHeaderMenu(store => store.isOpen)
@@ -18,7 +19,7 @@ export const Header = () => {
   return (
     <S.Container>
       <S.NavBar className="container" aria-label="Principal">
-        <S.NavLogo href={'/'}>Augusto</S.NavLogo>
+        <NavLogo href={'/'}>Augusto</NavLogo>
 
         <S.NavMenu isOpen={isOpen}>
           <S.NavList className="grid">
