@@ -11,6 +11,7 @@ import {
 } from 'react-icons/ri'
 import { useHeaderMenu } from '~/stores/headerMenu'
 import { NavLogo } from './NavLogo'
+import { NavLink } from './NavLink'
 
 export const Header = () => {
   const isOpen = useHeaderMenu(store => store.isOpen)
@@ -24,39 +25,39 @@ export const Header = () => {
         <S.NavMenu isOpen={isOpen}>
           <S.NavList className="grid">
             <li>
-              <S.NavLink href="#home" onClick={() => handleToggleMenu()}>
+              <NavLink href="#home" onClick={() => handleToggleMenu()}>
                 <RiHome5Line /> Home
-              </S.NavLink>
+              </NavLink>
             </li>
 
             <li>
-              <S.NavLink href="#habilidades" onClick={() => handleToggleMenu()}>
+              <NavLink href="#habilidades" onClick={() => handleToggleMenu()}>
                 <RiTrophyLine /> Habilidades
-              </S.NavLink>
+              </NavLink>
             </li>
 
             <li>
-              <S.NavLink href="#qualificacoes" onClick={() => handleToggleMenu()}>
+              <NavLink href="#qualificacoes" onClick={() => handleToggleMenu()}>
                 <RiBookOpenLine /> Qualificações
-              </S.NavLink>
+              </NavLink>
             </li>
 
             <li>
-              <S.NavLink href="#serviços" onClick={() => handleToggleMenu()}>
+              <NavLink href="#serviços" onClick={() => handleToggleMenu()}>
                 <RiBriefcaseLine /> Serviços
-              </S.NavLink>
+              </NavLink>
             </li>
 
             <li>
-              <S.NavLink href="#projetos" onClick={() => handleToggleMenu()}>
+              <NavLink href="#projetos" onClick={() => handleToggleMenu()}>
                 <RiImageLine /> Projetos
-              </S.NavLink>
+              </NavLink>
             </li>
 
             <li>
-              <S.NavLink href="#contato" onClick={() => handleToggleMenu()}>
+              <NavLink href="#contato" onClick={() => handleToggleMenu()}>
                 <RiChat3Line /> Contato
-              </S.NavLink>
+              </NavLink>
             </li>
           </S.NavList>
 

@@ -100,34 +100,6 @@ export const NavList = styled.ul`
   `}
 `
 
-export const NavLink = styled.a`
-  ${({ theme: { font, colors, medias } }) => css`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 0.4rem;
-    font-size: ${font.sizes.smaller};
-    color: ${colors.textLight};
-    transition: color 0.3s;
-
-    &:hover {
-      color: ${colors.title};
-    }
-
-    svg {
-      font-size: 2rem;
-    }
-
-    @media screen and ${medias.lg} {
-      font-size: ${font.sizes.normal};
-
-      svg {
-        display: none;
-      }
-    }
-  `}
-`
-
 export const NavMenuCloseBtn = styled.button`
   ${({ theme: { colors, medias } }) => css`
     color: ${colors.title};

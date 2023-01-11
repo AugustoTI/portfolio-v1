@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavLink /> should to match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  row-gap: 0.4rem;
+  font-size: var(--smaller-font-size);
+  color: hsl(207, 4%, 56%);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.emotion-0:hover {
+  color: hsl(207, 4%, 16%);
+}
+
+.emotion-0 svg {
+  font-size: 2rem;
+}
+
+@media screen and (min-width:1023px) {
+  .emotion-0 {
+    font-size: var(--normal-font-size);
+  }
+
+  .emotion-0 svg {
+    display: none;
+  }
+}
+
+<a
+  class="emotion-0 emotion-1"
+  href="#"
+>
+  <svg
+    fill="currentColor"
+    height="1em"
+    stroke="currentColor"
+    stroke-width="0"
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g>
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+      <path
+        d="M13 19h6V9.978l-7-5.444-7 5.444V19h6v-6h2v6zm8 1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.222a1 1 0 0 1 1.228 0l8 6.222a1 1 0 0 1 .386.79V20z"
+      />
+    </g>
+  </svg>
+   Example
+</a>
+`;
